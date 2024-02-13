@@ -215,10 +215,14 @@ const Navbar = () => {
                   show={setShowDropdowUserIcon}
                 >
                   <section className="droploginpage">
-                    <img src={crossicon}
-                     alt=""
-                     onClick={() => setShowDropdowUserIcon(!showDropdowUserIcon)} 
-                     className="crossicon" />
+                    <img
+                      src={crossicon}
+                      alt=""
+                      onClick={() =>
+                        setShowDropdowUserIcon(!showDropdowUserIcon)
+                      }
+                      className="crossicon"
+                    />
 
                     <h3>
                       Log in to your
@@ -265,7 +269,9 @@ const Navbar = () => {
                             </div>
                           ))}
                         </div>
-                        <span className="forget-text">Forgot password</span>
+                        <button className="forget-text">
+                          Forgot password?
+                        </button>
                       </div>
                       <button className="loginbutton">Login</button>
                       <hr />

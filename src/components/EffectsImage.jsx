@@ -1,132 +1,53 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import arrow1 from "../assets/left.svg";
+import arrow2 from "../assets/right.svg";
+import arrow4 from "../assets/end.svg";
+import arrow3 from "../assets/seconda.svg";
+import mobilearrow from "../assets/icons/even-arrow.svg";
+import mobilengo from "../assets/ngo-zoom.svg";
 import { useGSAP } from "@gsap/react";
-
-// Don't change below svgs they were manually return
-import IndividualPageChart from "./../assets/indivisualpagedesktop.svg?react";
-import NgoPageChart from "./../assets/ngoPageChartdesktop.svg?react";
-import IndividualPageChartMobile from "../assets/indivisualpageMobile.svg?react";
-import NgoPageChartMobile from "./../assets/ngoPageChartMobile.svg?react";
 
 const EffectsImage = (props) => {
 	const group22ref = useRef(null);
-	const group22MobileRef = useRef(null);
-
 	const frame14ref = useRef(null);
 
-	useGSAP(
-		() => {
-			const tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: group22ref.current,
-					start: "top 55%",
-					end: "bottom center",
-					scrub: true,
-				},
-			});
+	const parallax = useRef(null);
+	const parallax1 = useRef(null);
 
-			tl.from(".chart-left-arrow", {
-				opacity: 0,
-				transformOrigin: "left",
-				scale: 0.5,
-				duration: 2,
-				ease: "sine.in",
-			}).to(".chart-left-arrow", { opacity: 1, scale: 1 });
+	useGSAP(() => {
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: group22ref.current,
+				start: "top 30%",
+				end: "bottom 70%",
+				scrub: true,
+				
+			},
+		});
 
-			tl.from(".chart-right-arrow", {
-				opacity: 0,
-				transformOrigin: "left",
-				scale: 0.5,
-				duration: 2,
-				ease: "sine.out",
-				delay: "-0.5",
-			}).to(".chart-right-arrow", { opacity: 1, scale: 1 });
-		},
-		{ scope: group22ref }
-	);
+		tl.from(parallax1.current, {
+			opacity: 0,
+			transformOrigin: "left",
+			scale: 0,
+			delay: 0,
+			duration: 2,
+			
+		}).to(parallax1.current, { opacity: 1, scale: 1 });
 
-	// Mobile arrow Animation
-
-	useGSAP(
-		() => {
-			const tlIndividualPage = gsap.timeline({
-				scrollTrigger: {
-					trigger: group22ref.current,
-					start: "top 70%",
-					end: "bottom 65%",
-					scrub: true,
-				},
-			});
-			const tlNgoPage = gsap.timeline({
-				scrollTrigger: {
-					trigger: group22ref.current,
-					start: "top center",
-					end: "bottom 40%",
-					scrub: true,
-				},
-			});
-
-			tlIndividualPage
-				.from(".group-22-mobile-arrow-top", {
-					opacity: 0,
-					scaleY: 0,
-					scaleX: 0.5,
-					transformOrigin: "top",
-					duration: 1,
-				})
-				.to(".group-22-mobile-arrow-top", {
-					ease: "sine.Out",
-					opacity: 1,
-					scaleY: 1,
-					scaleX: 1,
-				});
-			tlIndividualPage
-				.from(".group-22-mobile-arrow-bottom", {
-					opacity: 0,
-					scaleY: 0,
-					scaleX: 0.5,
-					transformOrigin: "top",
-					duration: 2,
-					delay: "0.5",
-				})
-				.to(".group-22-mobile-arrow-bottom", {
-					ease: "sine.out",
-					opacity: 1,
-					scaleY: 1,
-					scaleX: 1,
-				});
-
-			tlNgoPage
-				.from(".ngoChartMobile-arrow-top", {
-					opacity: 0,
-					scaleY: 0,
-					scaleX: 0.5,
-					transformOrigin: "top",
-					duration: 1,
-				})
-				.to(".ngoChartMobile-arrow-top", {
-					ease: "sine.in",
-					opacity: 1,
-					scaleY: 1,
-					scaleX: 1,
-				});
-
-			tlNgoPage
-				.from(".ngoChartMobile-arrow-bottom", {
-					opacity: 0,
-					transformOrigin: "top",
-					scale: 0.5,
-					duration: 2,
-					delay: "-0.5",
-				})
-				.to(".ngoChartMobile-arrow-bottom", { opacity: 1, scale: 1 });
-		},
-		{ scope: group22MobileRef.current }
-	);
+		tl.from(parallax.current, {
+			opacity: 0,
+			scale: 0,
+			transformOrigin: "left",
+			delay: 0,
+			duration: 2,
+			
+		}).to(parallax.current, { opacity: 1, scale: 1 });
+	});
 
 	return (
 		<section>
-			<div className="container mt-5 pt-5" id="scrolltriggerpoint">
+			<div className="container mt-5 pt-5" id="scrolltriggerpoint" ref={group22ref}>
 				<div className="overlap-4">
 					<div className="frame-14" ref={frame14ref}>
 						<p className="let-s-help-you">
@@ -135,7 +56,7 @@ const EffectsImage = (props) => {
 							<span className="span"> {props.heading2}</span>{" "}
 						</p>
 						<p className="text-wrapper-17 indivisualtext">{props.para}</p>
-						<p className="">
+						<p className="text-wrapper-17 ngptextbold ">
 							At Actitude, we want to help your organization get where you're
 							trying to go. We help you{" "}
 							<span className="text-wrapper-243">set up</span> volunteering
@@ -146,17 +67,26 @@ const EffectsImage = (props) => {
 						</p>
 					</div>
 
-					<div className="group-22" ref={group22ref}>
+					<div className="group-22" >
 						<div className="overlap-5  mt-5 desktop-slider">
-							<IndividualPageChart className="zoom-imaages" />
-							<NgoPageChart className="zoom-imaage" />
+							<img
+								ref={parallax1}
+								src={arrow1}
+								alt=""
+								className="left-sideimg"
+							/>
+							<img src={arrow4} className="zoom-imaages" />
+							<img src={arrow3} className="zoom-imaage" />
+							<img
+								ref={parallax}
+								src={arrow2}
+								alt=""
+								className="right-sideimg"
+							/>
 						</div>
-						<div
-							id="scrolltrimob"
-							ref={group22MobileRef}
-							className="mobile-slider">
-							<IndividualPageChartMobile className="zoom-imaages" />
-							<NgoPageChartMobile className="zoom-imaage" />
+						<div id="scrolltrimob" className="mobile-slider">
+							<img src={mobilearrow} className="zoom-imaages" />
+							<img src={mobilengo} className="zoom-imaage" />
 						</div>
 					</div>
 				</div>
