@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@font-face {
+  font-family: "century-schoolbook";
+  src:local('Century Schoolbook'), url(./assets/fonts/century/centurySchool.woff) format('woff');
+  
+}
+
+
+
+  
+  * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+  }
+  
+  
+  .overrife{
+    color: #F88D2A;
+    
+  }
+  #main-banner h6{
+    color: var(--WHITE, #FFF);
+  font-family: gotham-light;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px; /* 131.25% */
+  }
+  #main-banner h1{
+    color: var(--WHITE, #FFF);
+font-family: Century-regular;
+font-size: 54px;
+font-style: normal;
+font-weight: 700;
+line-height: 66px; /* 122.222% */
+  }
+  
+  #main-banner p{
+    color: var(--WHITE, #FFF);
+/* body copy */
+font-family: Gotham-light;
+font-size: 24px;
+font-style: normal;
+font-weight: 325;
+line-height: 30px; /* 125% */
+  }
+  
+  #main-banner .takeover{
+    border-radius: 10px;
+background: var(--Red, #C10230);
+ color: #fff;
+ padding: 15px 50px;
+ color: var(--WHITE, #FFF);
+font-family: Gotham-light;
+font-size: 18px;
+font-style: normal;
+font-weight: 100;
+line-height: 35px; /* 194.444% */
+text-transform: capitalize;
+  }
+  

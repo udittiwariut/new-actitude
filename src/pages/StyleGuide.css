@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Gotham-Book", Helvetica;
+  src: url("../assets/fonts/Gotham-Font/Gotham-Font/GothamBook.ttf");
+}
+
+@font-face {
+  font-family: "Gotham-Medium", Helvetica;
+  src: url("../assets/fonts/Gotham-Font/Gotham-Font/GothamMedium.ttf");
+}
+@font-face {
+  font-family: "Gotham-Bold", Helvetica;
+  src: url("../assets/fonts/Gotham-Font/Gotham-Font/GothamBold.ttf");
+}
+@font-face {
+  font-family: "century-schoolbook", sans-serif;
+  src:local('century-schoolbook-'), url("../assets/fonts/century/centurySchool.woff") format('woff');
+  
+}
+@font-face {
+  font-family: "century-bold", sans-serif;
+  src:local('Century Schoolbook'), url("../assets/fonts/century/centurySchool.woff") format('woff');
+}
+
+
+:root {
+  --red: rgba(193, 2, 48, 1);
+  --orange: rgba(248, 141, 42, 1);
+  --dark-grey: rgba(95, 80, 77, 1);
+  --h1-font-family: "century-schoolbook", sans-serif;
+  --h1-font-weight: 700;
+  --h1-font-size: 54px;
+  --h1-letter-spacing: 0px;
+  --h1-line-height: 66px;
+  --h1-font-style: normal;
+  --h3-font-family: "Gotham-Book", Helvetica;
+  --h3-font-weight: 400;
+  --h3-font-size: 32px;
+  --h3-letter-spacing: 0px;
+  --h3-line-height: 42px;
+  --h3-font-style: normal;
+  --h4-font-family: "Gotham-Medium", Helvetica;
+  --h4-font-weight: 500;
+  --h4-font-size: 28px;
+  --h4-letter-spacing: 0px;
+  --h4-line-height: 36px;
+  --h4-font-style: normal;
+  --h5-font-family: "Gotham-Book", Helvetica;
+  --h5-font-weight: 400;
+  --h5-font-size: 24px;
+  --h5-letter-spacing: 0px;
+  --h5-line-height: 30px;
+  --h5-font-style: normal;
+  --body-copy-font-family: "Gotham-Book", Helvetica;
+  --body-copy-font-weight: 400;
+  --body-copy-font-size: 24px;
+  --body-copy-letter-spacing: 0px;
+  --body-copy-line-height: 30px;
+  --body-copy-font-style: normal;
+  --button-text-font-family: "Gotham-Bold", Helvetica;
+  --button-text-font-weight: 700;
+  --button-text-font-size: 20px;
+  --button-text-letter-spacing: 0px;
+  --button-text-line-height: 35px;
+  --button-text-font-style: normal;
+  --category-headers-font-family: "century-schoolbook", sans-serif;
+  --category-headers-font-weight: 400;
+  --category-headers-font-size: 29px;
+  --category-headers-letter-spacing: 0px;
+  --category-headers-line-height: 39px;
+  --category-headers-font-style: normal;
+  --mobile-h1-font-family: "century-schoolbook", sans-serif;
+  --mobile-h1-font-weight: 700;
+  --mobile-h1-font-size: 30px;
+  --mobile-h1-letter-spacing: 0px;
+  --mobile-h1-line-height: 36px;
+  --mobile-h1-font-style: normal;
+  --above-header-font-family: "Gotham-Book", Helvetica;
+  --above-header-font-weight: 400;
+  --above-header-font-size: 18px;
+  --above-header-letter-spacing: 0px;
+  --above-header-line-height: 24px;
+  --above-header-font-style: normal;
+  --mobile-button-text-font-family: "Gotham-Bold", Helvetica;
+  --mobile-button-text-font-weight: 700;
+  --mobile-button-text-font-size: 16px;
+  --mobile-button-text-letter-spacing: 0px;
+  --mobile-button-text-line-height: 35px;
+  --mobile-button-text-font-style: normal;
+  --variable-collection-WHITE: rgba(255, 255, 255, 1);
+  --variable-collection-black: rgba(0, 0, 0, 1);
+  --variable-collection-LIGHTGREY: rgba(237, 237, 237, 1);
+  --variable-collection-dark-gray: rgba(95, 80, 77, 1);
+  --variable-collection-other-logo-design: rgba(83, 80, 80, 1);
+}

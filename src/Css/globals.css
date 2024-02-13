@@ -1,0 +1,56 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/624afd97dbf85b221b75484d/fonts/gotham-medium.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6546a6a8e6cfe31c46f5ccea/fonts/gotham-book.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham-BoldItalic";
+  src: url("https://anima-uploads.s3.amazonaws.com/5c779a9cd8f2b0000c7ff835/GothamBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/65410c35416ace0412c89137/fonts/gotham-bold.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6188516477e5a840e6864c9e/fonts/gotham-thin.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/62ba91238d381f5d60e3d21d/fonts/gotham-regular.otf")
+    format("opentype");
+}
+
+
+
